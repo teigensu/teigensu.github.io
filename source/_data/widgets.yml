@@ -1,0 +1,9 @@
+welcome:
+  layout: markdown
+  title: 欢迎来到——
+  content: |
+    这里大概是张晓山的个人站点（在中国大陆大概不能裸连）。评论功能需要通过GitHub登录。
+    想要 [了解我](https://karakara.top/about/) ？
+    还是有话想 [告诉我](https://karakara.top/messages/) ？
+    我可能并不能算得上是一个有趣的人，但希望这个地方还是能成为我小小的一片自留地。
+    并颂春祺夏安，秋绥冬禧。

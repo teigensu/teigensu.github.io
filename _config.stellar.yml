@@ -1,0 +1,99 @@
+# Open Graph 标签，也就是头部标签
+open_graph:
+  enable: true
+  twitter_id: Kara_1st # for open_graph meta
+
+# 翻转文字
+logo:
+  subtitle: '张 晓山的个人站点 | Personal Site of Teigen Su' # '文字1 | 文字2' (鼠标放上去会切换到文字2)
+
+# 侧边栏主功能导航菜单
+menubar:
+  columns: 4 # 一行多少个
+  items: # 可按照自己需求增加，符合以下格式即可
+    - id: post  # - id: post # 页面中高亮的 menu_id
+      theme: '#1BCDFC' #   theme: '#1BCDFC' # 高亮时的颜色，仅 svg 中 fill="currentColor" 时有效
+      icon: solar:documents-bold-duotone #   icon: solar:documents-bold-duotone # 支持 svg/img 标签，可以定义在 icons.yml 文件中，也支持外部图片的 URL
+      title: 博客 #   title: 博客 # 标题
+      url: / #   url: / # 跳转链接，支持相对路径和绝对路径
+    - id: wiki
+      theme: '#3DC550'
+      icon: solar:notebook-bookmark-bold-duotone
+      title: 文档
+      url: /wiki
+    - id: explore
+      theme: '#FA6400'
+      icon: solar:planet-bold-duotone
+      title: 探索
+      url: /explore/
+    - id: social
+      theme: '#F44336'
+      icon: solar:chat-square-like-bold-duotone
+      title: 社交
+      url: /friends/
+
+# 文章搜索
+search:
+  service: local_search # local_search, todo...
+  local_search: # 在 front-matter 中设置 indexing:false 来避免被搜索索引
+    field: all # post, page, all
+    path: /search.json # 搜索文件存放位置
+    content: true # 是否搜索内容
+    codeblock: true # 是否搜索代码块（需要content: true）
+
+style:
+  leftbar: 'linear-gradient(45deg, #d5e6eb, #f2f0eb)'
+
+site_tree:
+  # -- 列表类页面 -- #
+  # 主页配置
+  home:
+    leftbar: welcome, recent
+    rightbar: timeline
+
+article:
+  category_color:
+    '一些像诗的东西': '#729786'
+  license: '本文采用 [署名-非商业性使用-相同方式共享 4.0 国际](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。'
+
+comments:
+  service: giscus
+  giscus: 
+    src: https://giscus.app/client.js
+    data-repo: teigensu/teigensu.github.io # [在此输入仓库]
+    data-repo-id: R_kgDOMS0w5w # [在此输入仓库 ID]
+    data-category: Announcements # [在此输入分类名]
+    data-category-id: DIC_kwDOMS0w584ChQDU
+    data-mapping: pathname
+    data-strict: 0
+    data-reactions-enabled: 1
+    data-emit-metadata: 0
+    data-input-position: top # top, bottom
+    data-theme: preferred_color_scheme
+    data-lang: zh-CN
+    data-loading: lazy
+    crossorigin: anonymous
+
+footer:
+  social:
+    github:
+      icon: '<img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/08a41b181ce68.svg"/>'
+      url: https://github.com/teigensu
+  sitemap:
+    # '博客':
+    #   - '[近期](/)'
+    #   - '[分类](/)'
+    #   - '[标签](/)'
+    #   - '[归档](/)'
+    # '项目':
+    #   - '[开源库](/)'
+    # '社交':
+    #   - '[友链](/)'
+    #   - '[留言板](/)'
+    # '更多':
+    #   - '[关于本站](/)'
+    #   - '[GitHub](/)'
+  content: | # 支持 Markdown 格式
+    本站由 **张 晓山** 使用 [{theme.name} {theme.version}]({theme.tree}) 主题创建。
+    本博客所有文章除特别声明外，均采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。
+

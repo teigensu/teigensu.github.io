@@ -1,0 +1,21 @@
+name: Medical Wiki
+title: Medical Wiki
+subtitle: '张 晓山的个人站点 | Personal Site of Teigen Su'
+tags: medical wiki
+icon: https://raw.githubusercontent.com/teigensu/teigensu.github.io/main/profile.png
+cover: /assets/wiki/stellar/icon.svg
+description: 这里是张晓山的个人医学学习Wiki。
+search:
+  filter: /medicalwiki
+  placeholder: 在本Wiki中搜索……
+leftbar: 
+  - tree
+  - timeline_stellar_releases
+  - related
+comment_title: ''
+base_dir: /wiki
+tree:
+  '主页':
+    - index
+    - examples
+    - releases
