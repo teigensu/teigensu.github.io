@@ -5051,6 +5051,37 @@ details.toc[open] >div.body section .header+.doc_tree {
     -webkit-backdrop-filter: saturate(240%) blur(var(--blur-px));
   }
 }
+.widget-wrapper.categories-widget .widget-body {
+  border-radius: 12px;
+  padding: 12px 20px;
+  background: var(--alpha50);
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+}
+.category {
+  line-height: 1.5;
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+}
+.category-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+.category a {
+  display: inline-block;
+  word-break: break-word;
+  color: var(--text-p2);
+  font-family: system-ui;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+}
+.category a:hover {
+  color: #ff5724;
+  text-decoration: underline;
+}
 .widget-body .linklist {
   display: grid;
   grid-gap: 8px;
@@ -5245,7 +5276,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   width: auto;
 }
 .widgets .widget-wrapper.user-card .follow:hover {
-  background: #ff5724;
+  background: #0366d6;
 }
 .widgets .widget-wrapper.user-card .buttons {
   margin: 1rem 0;
@@ -5332,8 +5363,8 @@ details.toc[open] >div.body section .header+.doc_tree {
   color: var(--text);
 }
 .widget-wrapper.markdown .widget-body a:not([class]):hover {
-  color: #ff5724;
-  border-bottom: 1px solid #ff5724;
+  color: #0366d6;
+  border-bottom: 1px solid #0366d6;
 }
 .widget-wrapper.markdown .linklist {
   margin: 1em 0;
@@ -5402,7 +5433,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   line-height: 1.5;
 }
 .widget-wrapper.tagcloud .widget-body a:hover {
-  color: #ff5724;
+  color: #0366d6;
 }
 .widget-wrapper.timeline .tag-plugin.timeline {
   padding-left: 0;
@@ -5699,6 +5730,101 @@ details.toc[open] >div.body section .header+.doc_tree {
     margin-top: 4px;
   }
 }
+.widget-wrapper.user-card .widget-header+.widget-body {
+  margin: 0.75rem 0;
+}
+.widget-wrapper.user-card .widget-body {
+  text-align: center;
+  background: var(--card);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
+}
+.widgets .widget-wrapper.user-card .avatar {
+  display: block;
+  border-radius: 100%;
+  margin: 1rem auto 1.25rem auto;
+  max-width: 128px;
+  overflow: hidden;
+}
+.widgets .widget-wrapper.user-card .avatar img {
+  display: block;
+  aspect-ratio: 1;
+}
+@media screen and (max-width: 768px) {
+  .widgets .widget-wrapper.user-card .avatar {
+    max-width: 50%;
+  }
+}
+.widgets .widget-wrapper.user-card p.username {
+  font-weight: 900;
+  font-size: calc(17px + 11px);
+  color: var(--text);
+  margin: 0;
+}
+.widgets .widget-wrapper.user-card p.bio {
+  font-size: 0.8125rem;
+  margin: 0;
+}
+.widgets .widget-wrapper.user-card .follow {
+  font-weight: 500;
+  border-radius: 64px;
+  margin: 1rem 0 0;
+  padding: 0.5rem 1rem;
+  background: #1cd0fd;
+  color: var(--card);
+  font-size: 1rem;
+  align-self: stretch;
+  text-align: center;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease-out;
+  -moz-transition: background 0.2s ease-out;
+  -webkit-transition: background 0.2s ease-out;
+  -o-transition: background 0.2s ease-out;
+}
+.widgets .widget-wrapper.user-card .follow svg {
+  margin-right: 6px;
+  height: 1.5em;
+  width: auto;
+}
+.widgets .widget-wrapper.user-card .follow:hover {
+  background: #0366d6;
+}
+.widgets .widget-wrapper.user-card .buttons {
+  margin: 1rem 0;
+  align-self: stretch;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(auto-fill, calc((100% - 2 * 2px) / 3));
+}
+.widgets .widget-wrapper.user-card .btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: inherit;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 0.25rem 0;
+  transition: background 0.2s ease-out;
+  -moz-transition: background 0.2s ease-out;
+  -webkit-transition: background 0.2s ease-out;
+  -o-transition: background 0.2s ease-out;
+}
+.widgets .widget-wrapper.user-card .btn:hover {
+  background: var(--block);
+}
+.widgets .widget-wrapper.user-card .btn .title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.widgets .widget-wrapper.user-card .btn .desc {
+  font-size: 0.75rem;
+  color: var(--text-p3);
+  font-weight: 500;
+}
 .widgets .loading-wrap {
   margin: 0.5rem 0;
   background: var(--alpha50);
@@ -5766,12 +5892,12 @@ details.toc[open] >div.body section .header+.doc_tree {
   fill: var(--text-p2);
 }
 .widgets .widget-wrapper .widget-header .cap-action:hover {
-  color: #ff5724;
+  color: #0366d6;
   background: var(--alpha100);
   opacity: 1;
 }
 .widgets .widget-wrapper .widget-header .cap-action:hover svg {
-  fill: #ff5724;
+  fill: #0366d6;
 }
 .widgets .widget-wrapper .widget-body {
   color: var(--text-p1);
@@ -6589,7 +6715,7 @@ body>.sitebg .siteblur:hover {
 .md-text.content h4 >a:first-child:hover,
 .md-text.content h5 >a:first-child:hover,
 .md-text.content h6 >a:first-child:hover {
-  background: #ff5724;
+  background: #0366d6;
 }
 .md-text.content h1 >a:first-child:before,
 .md-text.content h2 >a:first-child:before,
@@ -6756,7 +6882,7 @@ div.swiper-slide img {
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
   background: #fff !important;
-  --swiper-theme-color: #ff5724 !important;
+  --swiper-theme-color: #0366d6 !important;
 }
 .swiper-button-prev:after {
   transform: translateX(-1px);
