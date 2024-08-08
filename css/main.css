@@ -5153,64 +5153,52 @@ details.toc[open] >div.body section .header+.doc_tree {
 .linklist .link:hover svg {
   filter: unset;
 }
-.widget-wrapper.followme-widget .widget-header+.widget-body {
-  margin: 0.75rem 0;
-}
-.widget-wrapper.followme-widget .widget-body {
+.followme-widget .fmwidget-body {
   text-align: center;
   background: var(--card);
   border-radius: 12px;
   padding: 1rem;
-  box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
 }
-.widgets .widget-wrapper.followme-widget .fmavatar {
+.followme-widget .fmavatar {
   margin: 1rem auto 1.25rem auto;
-  display: block;
-  border-radius: 100%;
-  margin: 1rem auto 1.25rem auto;
+  border-radius: 10%;
   max-width: 128px;
   overflow: hidden;
-}
-.widgets .widget-wrapper.followme-widget .fmavatar img {
-  display: block;
-  aspect-ratio: 1;
+  border: 3px solid #fff;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
 }
 @media screen and (max-width: 768px) {
-  .widgets .widget-wrapper.followme-widget .fmavatar {
+  .followme-widget .fmavatar {
     max-width: 50%;
   }
 }
-.widgets .widget-wrapper.followme-widget .fmtext {
+.followme-widget .fmtext {
   text-align: center;
   font-weight: 900;
   font-size: calc(17px + 11px);
   color: var(--text);
   margin: 0;
 }
-.widgets .widget-wrapper.followme-widget .fmbtn {
-  display: flex;
+.followme-widget .fmbutton {
+  margin: 1rem 0;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(auto-fill, calc((100% - 2 * 2px) / 3));
+}
+.followme-widget .fmbtn {
   flex-direction: column;
-  align-items: center;
-  color: inherit;
-  border: 1px solid transparent;
+  background: #1cd0fd;
   border-radius: 4px;
   padding: 0.25rem 0;
-  transition: background 0.2s ease-out;
-  -moz-transition: background 0.2s ease-out;
-  -webkit-transition: background 0.2s ease-out;
-  -o-transition: background 0.2s ease-out;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
-.widgets .widget-wrapper.followme-widget .fmbtn:hover {
-  background: var(--block);
+.followme-widget .fmbtn svg {
+  height: 1.5em;
+  width: auto;
 }
-.widgets .widget-wrapper.followme-widget .fmbtn .title {
-  font-size: 1rem;
-  font-weight: 700;
-}
-.widgets .widget-wrapper.followme-widget .fmbtn .desc {
-  font-size: 0.75rem;
-  color: var(--text-p3);
-  font-weight: 500;
+.followme-widget .fmbtn:hover {
+  background: #0366d6;
 }
 .widget-wrapper.ghrepo .repo {
   display: block;
@@ -5788,121 +5776,6 @@ details.toc[open] >div.body section .header+.doc_tree {
   .widget-wrapper.toc .widget-footer a+a {
     margin-top: 4px;
   }
-}
-.widget-wrapper.weibo-card .widget-body {
-  border-radius: 12px;
-  padding: 12px 20px;
-  background: #fff;
-  box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
-}
-.widget-wrapper.weibo-card .avatar {
-  display: block;
-  border-radius: 100%;
-  margin: 1.25rem;
-  max-width: 64px;
-  overflow: hidden;
-}
-.widget-wrapper.weibo-card .avatar img {
-  display: block;
-  aspect-ratio: 1;
-}
-@media screen and (max-width: 768px) {
-  .widget-wrapper.weibo-card .avatar {
-    max-width: 50%;
-  }
-}
-.widget-wrapper.weibo-card .buttons {
-  margin: 5rem 0;
-  align-self: stretch;
-  display: grid;
-  grid-gap: 2px;
-  grid-template-columns: repeat(auto-fill, calc((100% - 2 * 2px) / 3));
-}
-.widget-wrapper.weibouser .avatar {
-  display: block;
-  border-radius: 100%;
-  margin: 1rem auto 1.25rem auto;
-  max-width: 128px;
-  overflow: hidden;
-}
-.widget-wrapper.weibouser .avatar img {
-  display: block;
-  aspect-ratio: 1;
-}
-@media screen and (max-width: 768px) {
-  .widget-wrapper.weibouser .avatar {
-    max-width: 50%;
-  }
-}
-.widget-wrapper.weibouser p.username {
-  font-weight: 900;
-  font-size: calc(17px + 11px);
-  color: var(--text);
-  margin: 1rem;
-}
-.widget-wrapper.weibouser p.bio {
-  font-size: 0.8125rem;
-  margin: 0 0 0 0;
-  color: #aaa;
-}
-.widget-wrapper.weibouser .follow {
-  font-weight: 500;
-  border-radius: 64px;
-  margin: 1rem 0 0;
-  padding: 0.5rem 1rem;
-  background: #1cd0fd;
-  color: var(--card);
-  font-size: 1rem;
-  align-self: stretch;
-  text-align: center;
-  line-height: 1.5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.2s ease-out;
-  -moz-transition: background 0.2s ease-out;
-  -webkit-transition: background 0.2s ease-out;
-  -o-transition: background 0.2s ease-out;
-}
-.widget-wrapper.weibouser .follow svg {
-  margin-right: 6px;
-  height: 1.5em;
-  width: auto;
-}
-.widget-wrapper.weibouser .follow:hover {
-  background: #0366d6;
-}
-.widget-wrapper.weibouser .buttons {
-  margin: 1rem 0;
-  align-self: stretch;
-  display: grid;
-  grid-gap: 2px;
-  grid-template-columns: repeat(auto-fill, calc((100% - 2 * 2px) / 3));
-}
-.widget-wrapper.weibouser .btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: inherit;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  padding: 0.25rem 0;
-  transition: background 0.2s ease-out;
-  -moz-transition: background 0.2s ease-out;
-  -webkit-transition: background 0.2s ease-out;
-  -o-transition: background 0.2s ease-out;
-}
-.widget-wrapper.weibouser .btn:hover {
-  background: var(--block);
-}
-.widget-wrapper.weibouser .btn .title {
-  font-size: 1rem;
-  font-weight: 700;
-}
-.widget-wrapper.weibouser .btn .desc {
-  font-size: 0.75rem;
-  color: var(--text-p3);
-  font-weight: 500;
 }
 .widgets .loading-wrap {
   margin: 0.5rem 0;
