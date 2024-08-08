@@ -5153,6 +5153,65 @@ details.toc[open] >div.body section .header+.doc_tree {
 .linklist .link:hover svg {
   filter: unset;
 }
+.widget-wrapper.followme-widget .widget-header+.widget-body {
+  margin: 0.75rem 0;
+}
+.widget-wrapper.followme-widget .widget-body {
+  text-align: center;
+  background: var(--card);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
+}
+.widgets .widget-wrapper.followme-widget .fmavatar {
+  margin: 1rem auto 1.25rem auto;
+  display: block;
+  border-radius: 100%;
+  margin: 1rem auto 1.25rem auto;
+  max-width: 128px;
+  overflow: hidden;
+}
+.widgets .widget-wrapper.followme-widget .fmavatar img {
+  display: block;
+  aspect-ratio: 1;
+}
+@media screen and (max-width: 768px) {
+  .widgets .widget-wrapper.followme-widget .fmavatar {
+    max-width: 50%;
+  }
+}
+.widgets .widget-wrapper.followme-widget .fmtext {
+  text-align: center;
+  font-weight: 900;
+  font-size: calc(17px + 11px);
+  color: var(--text);
+  margin: 0;
+}
+.widgets .widget-wrapper.followme-widget .fmbtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: inherit;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 0.25rem 0;
+  transition: background 0.2s ease-out;
+  -moz-transition: background 0.2s ease-out;
+  -webkit-transition: background 0.2s ease-out;
+  -o-transition: background 0.2s ease-out;
+}
+.widgets .widget-wrapper.followme-widget .fmbtn:hover {
+  background: var(--block);
+}
+.widgets .widget-wrapper.followme-widget .fmbtn .title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.widgets .widget-wrapper.followme-widget .fmbtn .desc {
+  font-size: 0.75rem;
+  color: var(--text-p3);
+  font-weight: 500;
+}
 .widget-wrapper.ghrepo .repo {
   display: block;
   padding: 0.75rem 0.5rem;
@@ -5730,43 +5789,63 @@ details.toc[open] >div.body section .header+.doc_tree {
     margin-top: 4px;
   }
 }
-.widget-wrapper.user-card .widget-header+.widget-body {
-  margin: 0.75rem 0;
-}
-.widget-wrapper.user-card .widget-body {
-  text-align: center;
-  background: var(--card);
+.widget-wrapper.weibo-card .widget-body {
   border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
+  padding: 12px 20px;
+  background: #fff;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
 }
-.widgets .widget-wrapper.user-card .avatar {
+.widget-wrapper.weibo-card .avatar {
+  display: block;
+  border-radius: 100%;
+  margin: 1.25rem;
+  max-width: 64px;
+  overflow: hidden;
+}
+.widget-wrapper.weibo-card .avatar img {
+  display: block;
+  aspect-ratio: 1;
+}
+@media screen and (max-width: 768px) {
+  .widget-wrapper.weibo-card .avatar {
+    max-width: 50%;
+  }
+}
+.widget-wrapper.weibo-card .buttons {
+  margin: 5rem 0;
+  align-self: stretch;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(auto-fill, calc((100% - 2 * 2px) / 3));
+}
+.widget-wrapper.weibouser .avatar {
   display: block;
   border-radius: 100%;
   margin: 1rem auto 1.25rem auto;
   max-width: 128px;
   overflow: hidden;
 }
-.widgets .widget-wrapper.user-card .avatar img {
+.widget-wrapper.weibouser .avatar img {
   display: block;
   aspect-ratio: 1;
 }
 @media screen and (max-width: 768px) {
-  .widgets .widget-wrapper.user-card .avatar {
+  .widget-wrapper.weibouser .avatar {
     max-width: 50%;
   }
 }
-.widgets .widget-wrapper.user-card p.username {
+.widget-wrapper.weibouser p.username {
   font-weight: 900;
   font-size: calc(17px + 11px);
   color: var(--text);
-  margin: 0;
+  margin: 1rem;
 }
-.widgets .widget-wrapper.user-card p.bio {
+.widget-wrapper.weibouser p.bio {
   font-size: 0.8125rem;
-  margin: 0;
+  margin: 0 0 0 0;
+  color: #aaa;
 }
-.widgets .widget-wrapper.user-card .follow {
+.widget-wrapper.weibouser .follow {
   font-weight: 500;
   border-radius: 64px;
   margin: 1rem 0 0;
@@ -5785,22 +5864,22 @@ details.toc[open] >div.body section .header+.doc_tree {
   -webkit-transition: background 0.2s ease-out;
   -o-transition: background 0.2s ease-out;
 }
-.widgets .widget-wrapper.user-card .follow svg {
+.widget-wrapper.weibouser .follow svg {
   margin-right: 6px;
   height: 1.5em;
   width: auto;
 }
-.widgets .widget-wrapper.user-card .follow:hover {
+.widget-wrapper.weibouser .follow:hover {
   background: #0366d6;
 }
-.widgets .widget-wrapper.user-card .buttons {
+.widget-wrapper.weibouser .buttons {
   margin: 1rem 0;
   align-self: stretch;
   display: grid;
   grid-gap: 2px;
   grid-template-columns: repeat(auto-fill, calc((100% - 2 * 2px) / 3));
 }
-.widgets .widget-wrapper.user-card .btn {
+.widget-wrapper.weibouser .btn {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -5813,14 +5892,14 @@ details.toc[open] >div.body section .header+.doc_tree {
   -webkit-transition: background 0.2s ease-out;
   -o-transition: background 0.2s ease-out;
 }
-.widgets .widget-wrapper.user-card .btn:hover {
+.widget-wrapper.weibouser .btn:hover {
   background: var(--block);
 }
-.widgets .widget-wrapper.user-card .btn .title {
+.widget-wrapper.weibouser .btn .title {
   font-size: 1rem;
   font-weight: 700;
 }
-.widgets .widget-wrapper.user-card .btn .desc {
+.widget-wrapper.weibouser .btn .desc {
   font-size: 0.75rem;
   color: var(--text-p3);
   font-weight: 500;
