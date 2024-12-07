@@ -17,18 +17,18 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>医学统计学：方差分析 - 卡拉卡拉一号机</title>
+  <title>医学统计学：t检验 - 卡拉卡拉一号机</title>
 
   
-    <meta name="description" content="《第八章 方差分析 (Analysis of Variance, ANOVA)》  8. 方差分析  8.1 方差分析的基本思想  知识点&#x2F;能力点：掌握方差分析的基本思想  定义：方差分析（ANOVA）是一种用于三个或三个以上样本均数比较的统计分析方法，由R.A. Fisher提出，也称变异数分析。 目的：通过比较各组样本均数，判断不同处理因素对样本均数是否有显著影响。 核心：将总变异分解为组间">
+    <meta name="description" content="单样本t检验「单样本t检验」适用于来自「正态分布」的某个样本均数$\bar{X}$与已知总体均数$\mu _0$的比较。 比较目的：检验样本均数$\bar X$所代表的总体均数$\mu$是否与已知总体均数$\mu _0$有差别。 单样本t检验用于总体标准差$\sigma$未知的资料，其统计量t值计算公式为： $$t &#x3D; \frac{\bar X - \mu_0}{S_{\bar X}}">
 <meta property="og:type" content="website">
-<meta property="og:title" content="方差分析">
-<meta property="og:url" content="http://karakara.top/medicalwiki/medical-statistics/%E6%96%B9%E5%B7%AE%E5%88%86%E6%9E%90.html">
+<meta property="og:title" content="t检验">
+<meta property="og:url" content="http://karakara.top/medicalwiki/medical-statistics/7.t%E6%A3%80%E9%AA%8C.html">
 <meta property="og:site_name" content="卡拉卡拉一号机">
-<meta property="og:description" content="《第八章 方差分析 (Analysis of Variance, ANOVA)》  8. 方差分析  8.1 方差分析的基本思想  知识点&#x2F;能力点：掌握方差分析的基本思想  定义：方差分析（ANOVA）是一种用于三个或三个以上样本均数比较的统计分析方法，由R.A. Fisher提出，也称变异数分析。 目的：通过比较各组样本均数，判断不同处理因素对样本均数是否有显著影响。 核心：将总变异分解为组间">
+<meta property="og:description" content="单样本t检验「单样本t检验」适用于来自「正态分布」的某个样本均数$\bar{X}$与已知总体均数$\mu _0$的比较。 比较目的：检验样本均数$\bar X$所代表的总体均数$\mu$是否与已知总体均数$\mu _0$有差别。 单样本t检验用于总体标准差$\sigma$未知的资料，其统计量t值计算公式为： $$t &#x3D; \frac{\bar X - \mu_0}{S_{\bar X}}">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-12-04T13:24:33.122Z">
-<meta property="article:modified_time" content="2024-12-04T13:24:33.122Z">
+<meta property="article:published_time" content="2024-12-07T06:57:40.589Z">
+<meta property="article:modified_time" content="2024-12-07T06:57:40.589Z">
 <meta property="article:author" content="张 晓山">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="@Kara_1st">
@@ -70,7 +70,7 @@
 </div>
 <div class="widgets">
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">...</span></div><div class="widget-body fs14"><a class="link" href="/medicalwiki/medical-statistics/index.html#start"><span class="toc-text">绪论</span></a><a class="link active" href="/medicalwiki/medical-statistics/%E6%96%B9%E5%B7%AE%E5%88%86%E6%9E%90.html"><span class="toc-text">方差分析</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a><a class="link" href="/medicalwiki/medical-statistics/11.%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E4%B8%8E%E7%9B%B8%E5%85%B3.html"><span class="toc-text">线性回归与相关</span></a><a class="link" href="/medicalwiki/medical-statistics/10.%E9%9D%9E%E5%8F%82%E6%95%B0%E7%A7%A9%E5%92%8C%E6%A3%80%E9%AA%8C.html"><span class="toc-text">非参数秩和检验</span></a><a class="link" href="/medicalwiki/medical-statistics/6.%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1%E4%B8%8E%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C.html"><span class="toc-text">参数估计与假设检验</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">...</span></div><div class="widget-body fs14"><a class="link" href="/medicalwiki/medical-statistics/index.html#start"><span class="toc-text">绪论</span></a><a class="link" href="/medicalwiki/medical-statistics/11.%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E4%B8%8E%E7%9B%B8%E5%85%B3.html"><span class="toc-text">线性回归与相关</span></a><a class="link" href="/medicalwiki/medical-statistics/10.%E9%9D%9E%E5%8F%82%E6%95%B0%E7%A7%A9%E5%92%8C%E6%A3%80%E9%AA%8C.html"><span class="toc-text">非参数秩和检验</span></a><a class="link" href="/medicalwiki/medical-statistics/6.%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1%E4%B8%8E%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C.html"><span class="toc-text">参数估计与假设检验</span></a><a class="link" href="/medicalwiki/medical-statistics/9.chi%5E2%E6%A3%80%E9%AA%8C.html"><span class="toc-text">$\chi ^2$检验</span></a><a class="link" href="/medicalwiki/medical-statistics/8.%E6%96%B9%E5%B7%AE%E5%88%86%E6%9E%90.html"><span class="toc-text">方差分析</span></a><a class="link active" href="/medicalwiki/medical-statistics/7.t%E6%A3%80%E9%AA%8C.html"><span class="toc-text">t检验</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a></div></widget>
 
 <widget class="widget-wrapper post-card"><div class="widget-header dis-select"><span class="name">更多：Medical Wiki</span></div><div class="widget-body"><a class="item wiki" href="/medicalwiki/comprohensive-diagnostic-1/index.html"><span class="title">诊断学综合-1</span><span class="excerpt">本课程所用课本为《诊断学》。</span></a><a class="item wiki" href="/medicalwiki/epidemiology/index.html"><span class="title">流行病学</span><span class="excerpt">本课程所用课本为《诊断学》。</span></a><a class="item wiki" href="/medicalwiki/medicalwiki/index.html"><span class="title">Medical Wiki</span><span class="excerpt">这里是张晓山的个人医学学习Wiki。</span></a><a class="item wiki" href="/medicalwiki/surgery/index.html"><span class="title">外科学总论</span><span class="excerpt">本课程为OBE整合课程。主要用到的教材包括《外科学》。</span></a><a class="item wiki" href="/medicalwiki/pathogen/index.html"><span class="title">病原体</span><span class="excerpt">本wiki参考资料：《病原生物学》。</span></a></div></widget>
 </div>
@@ -85,71 +85,78 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki">文档</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/medicalwiki/medical-statistics/index.html">医学统计学</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">更新于：<time datetime="2024-12-04T13:24:33.122Z">2024-12-04</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">更新于：<time datetime="2024-12-07T06:57:40.589Z">2024-12-07</time></span></div></div></div>
     
     <div class="bottom only-title">
       
       <div class="text-area">
-        <h1 class="text title"><span>方差分析</span></h1>
+        <h1 class="text title"><span>t检验</span></h1>
         
       </div>
     </div>
     
   </div>
-  </div><article class="md-text content"><h1 id="第八章-方差分析-analysis-of-variance-anova"><a class="markdownIt-Anchor" href="#第八章-方差分析-analysis-of-variance-anova"></a> 《第八章 方差分析 (Analysis of Variance, ANOVA)》</h1>
-<h2 id="8-方差分析"><a class="markdownIt-Anchor" href="#8-方差分析"></a> 8. 方差分析</h2>
-<h3 id="81-方差分析的基本思想"><a class="markdownIt-Anchor" href="#81-方差分析的基本思想"></a> 8.1 方差分析的基本思想</h3>
-<h4 id="知识点能力点掌握方差分析的基本思想"><a class="markdownIt-Anchor" href="#知识点能力点掌握方差分析的基本思想"></a> 知识点/能力点：掌握方差分析的基本思想</h4>
+  </div><article class="md-text content"><h1 id="单样本t检验"><a href="#单样本t检验" class="headerlink" title="单样本t检验"></a>单样本t检验</h1><p>「<strong>单样本t检验</strong>」适用于来自「<strong>正态分布</strong>」的某个样本均数$\bar{X}$与已知总体均数$\mu _0$的比较。</p>
+<p>比较目的：检验样本均数$\bar X$所代表的总体均数$\mu$是否与已知总体均数$\mu _0$有差别。</p>
+<p>单样本t检验用于总体标准差$\sigma$未知的资料，其统计量t值计算公式为：</p>
+<p>$$<br>t &#x3D; \frac{\bar X - \mu_0}{S_{\bar X}} &#x3D; \frac{\bar X - \mu _0}{S&#x2F;\sqrt{n}}, v&#x3D; n - 1<br>$$</p>
+<p>参数说明：</p>
 <ul>
-<li><strong>定义</strong>：方差分析（ANOVA）是一种用于三个或三个以上样本均数比较的统计分析方法，由R.A. Fisher提出，也称变异数分析。</li>
-<li><strong>目的</strong>：通过比较各组样本均数，判断不同处理因素对样本均数是否有显著影响。</li>
-<li><strong>核心</strong>：将总变异分解为组间变异和组内变异，通过比较组间和组内的均方来判断处理因素是否有显著影响。</li>
+<li>$S$：样本标准差</li>
+<li>$n$：样本含量</li>
 </ul>
-<h3 id="82-完全随机设计的方差分析"><a class="markdownIt-Anchor" href="#82-完全随机设计的方差分析"></a> 8.2 完全随机设计的方差分析</h3>
-<h4 id="知识点能力点掌握完全随机设计的方差分析"><a class="markdownIt-Anchor" href="#知识点能力点掌握完全随机设计的方差分析"></a> 知识点/能力点：掌握完全随机设计的方差分析</h4>
-<ul>
-<li><strong>定义</strong>：完全随机设计（completely randomized design）是将受试对象随机分配到各个处理组中进行实验观察的设计。</li>
-<li><strong>数据结构</strong>：处理因素只有一个，但有多个水平，通过比较不同水平组均值的比较，推断处理因素是否起作用。</li>
-<li><strong>方差分析步骤</strong>：
+<details class="tag-plugin colorful folding" color="yellow"><summary><span>例7-1</span></summary><div class="body"><blockquote><p>以往通过大规模调查已知某地新生儿平均出生体重为3.30kg。从该地难产儿中随机抽取35名新生儿作为研究样本，平均出生体重为3.42kg，标准差为0.40kg，问该地难产儿出生体重与一般新生儿体重有无差异？</p></blockquote><p>总体均数$\mu_0&#x3D;3.30kg$，总体标准差$\sigma$未知，$n&#x3D;35$为小样本，$\bar X&#x3D;3.42kg$，$S&#x3D;0.40kg$。<br>出生体重可假设为服从正态分布，选用单样本t检验。</p><p>(1)建立检验假设，确定检验水准。<br>$H_0:\mu &#x3D; \mu_0$，该地难产儿与一般新生儿平均出生体重相同。<br>$H_1:\mu \neq \mu_0$，该地难产而与一般新生儿平均出生体重不同。<br>$\alpha&#x3D;0.05$</p><p>(2)计算检验统计量。<br>在$\mu &#x3D; \mu_0$成立的前提条件下，计算统计量为：<br>$$<br>t &#x3D; \frac{\bar X - \mu_0}{S_{\bar X}} &#x3D; \frac{\bar X - \mu _0}{S&#x2F;\sqrt{n}} &#x3D; \frac{3.42-3.30}{0.40&#x2F;\sqrt{35}} &#x3D; 1.77<br>$$</p><p>(3)根据P值，做出推断结论。<br>本例自由度$v&#x3D;n-1&#x3D;34$，查t界值表，得$t_{0.05&#x2F;2,34}&#x3D;2.032$。因为$t&lt;t_{0.05&#x2F;2,34}$，故$P&gt;0.05$。按照$\alpha&#x3D;0.05$水准，不拒绝$H_0$，尚不能人物为该地难产出生体重与一般新生儿体重存在差异。</p></div></details>
+
+<h1 id="配对样本均数t检验"><a href="#配对样本均数t检验" class="headerlink" title="配对样本均数t检验"></a>配对样本均数t检验</h1><p>「配对样本均数t检验」，简称「配对t检验」，又称「非独立两眼哥白尼均属比较的t检验」。 </p>
+<p>比较目的：检验两配对样本均数所代表的<strong>未知总体均数</strong>是否有差别。</p>
+<blockquote>
+<p>配对设计：将受试对象按照「<strong>某些重要特征相近</strong>」的原则配对。</p>
 <ol>
-<li>提出检验假设，确定检验水准。</li>
-<li>计算检验统计量F值。</li>
-<li>确定P值，做出推断结论。</li>
+<li>同源配对：<strong>同一标本</strong>的两个部分，随机分配接受两种不同的处理。</li>
+<li>异源配对：将<strong>同质受试对象</strong>配对分别接受两种处理。</li>
 </ol>
+<del>其实我也没搞明白这些东西是什么。但总之就是一一配对。</del>
+</blockquote>
+<p>检验统计量$t$计算公式为：</p>
+<p>$$<br>t &#x3D; \frac{\bar d - \mu_d}{S_{\bar d}} &#x3D; \frac{\bar d - 0}{S_{\bar d}} &#x3D; \frac{\bar d}{S_d&#x2F;\sqrt{n}}<br>$$</p>
+<p>参数说明：</p>
+<ul>
+<li>$d$：每对数据的<strong>差值</strong>。</li>
+<li>$\bar d$：差值的样本均数。</li>
+<li>$S_d$：差值的<strong>样本标准差</strong>。</li>
+<li>$S_{\bar d}$：差值样本均数的标准差，即<strong>差值的标准误</strong>。<ul>
+<li>$S_{\bar d} &#x3D; S_d&#x2F;\sqrt{n}$</li>
+</ul>
+</li>
+<li>$n$：配对样本的<strong>对子数</strong>。</li>
+</ul>
+<details class="tag-plugin colorful folding" color="yellow"><summary><span>例7-2</span></summary><div class="body"><blockquote><p>某项研究评估咖啡因对运动者心肌血流量的影响，先后测定了12名男性志愿者饮用咖啡前后运动状态下的心肌血流量[$ml&#x2F;(min \cdot g)$]，数据如下表所示。问饮用咖啡前后运动者的心肌血流量有无差异。</p><table><thead><tr><th>编号</th><th>饮用前</th><th>饮用后</th><th>差值 $d$</th><th>编号</th><th>饮用前</th><th>饮用后</th><th>差值 $d$</th></tr></thead><tbody><tr><td>1</td><td>4.8</td><td>4.8</td><td>0</td><td>7</td><td>5.1</td><td>4.1</td><td>1.0</td></tr><tr><td>2</td><td>5.1</td><td>4.9</td><td>0.2</td><td>8</td><td>4.9</td><td>3.2</td><td>1.7</td></tr><tr><td>3</td><td>6.4</td><td>4.5</td><td>1.9</td><td>9</td><td>4.7</td><td>3.0</td><td>1.7</td></tr><tr><td>4</td><td>5.7</td><td>5.4</td><td>0.3</td><td>10</td><td>3.5</td><td>3.2</td><td>0.3</td></tr><tr><td>5</td><td>5.6</td><td>4.7</td><td>0.9</td><td>11</td><td>5.2</td><td>5.3</td><td>-0.1</td></tr><tr><td>6</td><td>5.3</td><td>3.8</td><td>1.5</td><td>12</td><td>5.3</td><td>5.1</td><td>0.2</td></tr></tbody></table></blockquote><p>本例$n&#x3D;12$，$\bar d &#x3D; 0.8$，$S_d&#x3D;0.741$。<br>配对差值$d$可假设为服从正态分布，选用配对t检验。</p><p>(1)建立检验假设，确定检验水准。<br>$H_0:\mu_d &#x3D; 0$，饮用咖啡前后运动者的心肌血流量差值为0。<br>$H_1:\mu_d \neq 0$，饮用咖啡前后运动者的心肌血流量差值不为0。<br>$\alpha&#x3D;0.05$</p><p>(2)计算检验统计量。<br>先计算差值$d$，如表所示。<br>计算差值的标准误：<br>$$<br>S_{\bar d} &#x3D; \frac{S_d}{\sqrt{n}} &#x3D; \frac{0.741}{\sqrt{12}} &#x3D; 0.214<br>$$<br>则在$\mu_d &#x3D; 0$条件下，检验统计量为：<br>$$<br>t &#x3D; \frac{\bar d}{S_{\bar d}} &#x3D; \frac{0.8}{0.214} &#x3D; 3.738<br>$$</p><p>(3)根据P值做出推断结论。<br>自由度$v &#x3D; n-1 &#x3D; 11$，查t界值表，得$t_{0.05&#x2F;2,11}&#x3D;2.201$。因为$t&gt;t_{0.05&#x2F;2,11}$，故$P&lt;0.05$。按照$\alpha&#x3D;0.05$水准，拒绝$H_0$，接受$H_1$，可以认为饮用咖啡前后运动者的心肌血流量存在差异。</p></div></details>
+
+<h1 id="两独立样本均数比较的t检验"><a href="#两独立样本均数比较的t检验" class="headerlink" title="两独立样本均数比较的t检验"></a>两独立样本均数比较的t检验</h1><p>「两独立样本t检验」，又称「成组t检验」。适用于完全随机设计下<strong>两样本均数的比较</strong>。</p>
+<p>比较目的：检验「<strong>两样本所来自的总体</strong>」的均数是否相等。</p>
+<p>要求</p>
+<ul>
+<li>两样本所在总体服从<strong>正态分布</strong>$N(\mu_1 , \sigma_1^2)$和$N(\mu_2 , \sigma_2^2)$。</li>
+<li>两总体方差$\sigma_1^2 &#x3D; \sigma_2^2$，即符合<strong>方差齐性</strong>。<ul>
+<li>若两者方差不齐，详见<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1GJ411x7h7">方差不齐时两样本均数的比较</a>。</li>
+</ul>
 </li>
 </ul>
-<h3 id="83-随机区组设计的方差分析"><a class="markdownIt-Anchor" href="#83-随机区组设计的方差分析"></a> 8.3 随机区组设计的方差分析</h3>
-<h4 id="知识点能力点掌握随机区组设计的方差分析"><a class="markdownIt-Anchor" href="#知识点能力点掌握随机区组设计的方差分析"></a> 知识点/能力点：掌握随机区组设计的方差分析</h4>
-<ul>
-<li><strong>定义</strong>：随机区组设计（randomized block design）是先将受试对象按条件相同或相近组成区组，再将每个区组内的受试对象随机分配到各个处理组中。</li>
-<li><strong>目的</strong>：控制非处理因素的变异，使处理组间的比较更加精确。</li>
-<li><strong>方差分析步骤</strong>：
-<ol>
-<li>提出检验假设，确定检验水准。</li>
-<li>计算检验统计量F值。</li>
-<li>确定P值，做出推断结论。</li>
-</ol>
-</li>
-</ul>
-<h3 id="84-多个样本均数的两两比较"><a class="markdownIt-Anchor" href="#84-多个样本均数的两两比较"></a> 8.4 多个样本均数的两两比较</h3>
-<h4 id="知识点能力点了解多个样本均数的两两比较"><a class="markdownIt-Anchor" href="#知识点能力点了解多个样本均数的两两比较"></a> 知识点/能力点：了解多个样本均数的两两比较</h4>
-<ul>
-<li><strong>问题</strong>：在方差分析显示有显著差异后，需要进一步确定哪些组间存在差异。</li>
-<li><strong>方法</strong>：包括Dunnett-t检验、LSD-t检验、SNK-q检验、Tukey法、Scheffe法和Bonferroni法等，用于两两比较均数差异。</li>
-<li><strong>注意</strong>：多次比较会增加犯第一类错误的风险，需要调整检验水准。</li>
-</ul>
-<h3 id="85-方差齐性检验"><a class="markdownIt-Anchor" href="#85-方差齐性检验"></a> 8.5 方差齐性检验</h3>
-<h4 id="知识点能力点了解方差齐性检验"><a class="markdownIt-Anchor" href="#知识点能力点了解方差齐性检验"></a> 知识点/能力点：了解方差齐性检验</h4>
-<ul>
-<li><strong>定义</strong>：方差齐性检验用于检验各组方差是否相等，是方差分析的重要前提条件。</li>
-<li><strong>重要性</strong>：如果方差不齐，则需要采用相应的方差不齐的方差分析方法或变量变换。</li>
-<li><strong>方法</strong>：常用的方差齐性检验方法包括Levene检验和Bartlett检验。</li>
-</ul>
-<p>通过以上内容的整理，您可以更清晰地理解和掌握方差分析的相关知识和技能。</p>
+<blockquote>
+<p>完全随机设计：将受试对象随机分配到两组中，每组对象分别接受不同的处理，分析比较两组的处理效应。</p>
+</blockquote>
+<p>成组t检验的假设是「两总体均数相等」，即$H_0:\mu_1 &#x3D; \mu_2$。所以，可以将两样本均数的差值$\bar X_1 - \bar X_2$看作一个统计量，$S_{\bar X_1 - \bar X_2}$就是差值的标准误。</p>
+<p>则，在$H_0$成立条件下，成组t检验可视为「样本$\bar X_1 - \bar X_2$」与「已知总体均数$\mu_1 - \mu_2 &#x3D; 0$」比较的「单样本t检验」。</p>
+<p>统计量计算公式为：</p>
+<p>$$<br>t &#x3D; \frac{(\bar X_1 - \bar X_2) - (\mu_1 - \mu_2)}{S_{\bar X_1 - \bar X_2}} &#x3D; \frac{\bar X_1 - \bar X_2}{S_{\bar X_1 - \bar X_2}}, v &#x3D; n_1 + n_2 - 2<br>$$</p>
+<p>其中，$S_{\bar X_1 - \bar X_2}$为两样本均数之差的标准差，也成为差值的标准误。</p>
+<p>$$<br>S_{\bar X_1 - \bar X_2} &#x3D; \sqrt{S_c^2(\frac{1}{n_1} + \frac{1}{n_2})}<br>$$</p>
+<p>$S_c^2$称为<strong>合并方差</strong>。</p>
+<p>$$<br>S_c^2 &#x3D; \frac{(n_1 - 1)S_1^2 + (n_2 - 1)S_2^2}{n_1 + n_2 - 2}<br>$$</p>
 
 <div class="article-footer fs14"></div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/medicalwiki/medical-statistics/index.html">绪论</a></div><div class="item" id="next"><div class="note">接下来阅读</div><a href="/medicalwiki/medical-statistics/11.%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E4%B8%8E%E7%9B%B8%E5%85%B3.html">线性回归与相关</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/medicalwiki/medical-statistics/8.%E6%96%B9%E5%B7%AE%E5%88%86%E6%9E%90.html">方差分析</a></div><div class="item" id="next"></div></section></div>
 
 
   <div class="related-wrap md-text" id="comments">
@@ -175,16 +182,14 @@
         src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
       ></script>
       <meta name="referrer" content="no-referrer-when-downgrade" />
-<footer class="page-footer footnote"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs15">博客</span><a href="https://karakara.top/">近期</a><a href="https://karakara.top/categories/">分类</a><a href="https://karakara.top/tags/">标签</a><a href="https://karakara.top/archives/">归档</a></div><div class="sitemap-group"><span class="fs15">笔记</span><a href="https://karakara.top/wiki/">Medical Wiki</a></div><div class="sitemap-group"><span class="fs15">社交</span><a href="https://karakara.top/friends/">友链</a><a href="https://karakara.top/about/#comments">留言板</a><a target="_blank" rel="noopener" href="https://weibo.com/u/5265142329">微博</a></div><div class="sitemap-group"><span class="fs15">更多</span><a href="https://karakara.top/about">关于本站</a><a target="_blank" rel="noopener" href="https://github.com/teigensu">GitHub</a></div></div><div class="text"><p>本站由 <strong>张 晓山</strong> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.1">Stellar 1.29.1</a> 主题创建。<br />
-本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。<br />
-<a href="https://karakara.top/explore/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97">站点更新日志</a></p>
+<footer class="page-footer footnote"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs15">博客</span><a href="https://karakara.top/">近期</a><a href="https://karakara.top/categories/">分类</a><a href="https://karakara.top/tags/">标签</a><a href="https://karakara.top/archives/">归档</a></div><div class="sitemap-group"><span class="fs15">笔记</span><a href="https://karakara.top/wiki/">Medical Wiki</a></div><div class="sitemap-group"><span class="fs15">社交</span><a href="https://karakara.top/friends/">友链</a><a href="https://karakara.top/about/#comments">留言板</a><a target="_blank" rel="noopener" href="https://weibo.com/u/5265142329">微博</a></div><div class="sitemap-group"><span class="fs15">更多</span><a href="https://karakara.top/about">关于本站</a><a target="_blank" rel="noopener" href="https://github.com/teigensu">GitHub</a></div></div><div class="text"><p>本站由 <strong>张 晓山</strong> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.1">Stellar 1.29.1</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。<br><a href="https://karakara.top/explore/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97">站点更新日志</a></p>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
 <div class="widgets">
 
 
 
-<widget class="widget-wrapper toc" id="data-toc" collapse="auto"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0-%E6%96%B9%E5%B7%AE%E5%88%86%E6%9E%90-analysis-of-variance-anova"><span class="toc-text"> 《第八章 方差分析 (Analysis of Variance, ANOVA)》</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E6%96%B9%E5%B7%AE%E5%88%86%E6%9E%90"><span class="toc-text"> 8. 方差分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#81-%E6%96%B9%E5%B7%AE%E5%88%86%E6%9E%90%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3"><span class="toc-text"> 8.1 方差分析的基本思想</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9%E8%83%BD%E5%8A%9B%E7%82%B9%E6%8E%8C%E6%8F%A1%E6%96%B9%E5%B7%AE%E5%88%86%E6%9E%90%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3"><span class="toc-text"> 知识点&#x2F;能力点：掌握方差分析的基本思想</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#82-%E5%AE%8C%E5%85%A8%E9%9A%8F%E6%9C%BA%E8%AE%BE%E8%AE%A1%E7%9A%84%E6%96%B9%E5%B7%AE%E5%88%86%E6%9E%90"><span class="toc-text"> 8.2 完全随机设计的方差分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9%E8%83%BD%E5%8A%9B%E7%82%B9%E6%8E%8C%E6%8F%A1%E5%AE%8C%E5%85%A8%E9%9A%8F%E6%9C%BA%E8%AE%BE%E8%AE%A1%E7%9A%84%E6%96%B9%E5%B7%AE%E5%88%86%E6%9E%90"><span class="toc-text"> 知识点&#x2F;能力点：掌握完全随机设计的方差分析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#83-%E9%9A%8F%E6%9C%BA%E5%8C%BA%E7%BB%84%E8%AE%BE%E8%AE%A1%E7%9A%84%E6%96%B9%E5%B7%AE%E5%88%86%E6%9E%90"><span class="toc-text"> 8.3 随机区组设计的方差分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9%E8%83%BD%E5%8A%9B%E7%82%B9%E6%8E%8C%E6%8F%A1%E9%9A%8F%E6%9C%BA%E5%8C%BA%E7%BB%84%E8%AE%BE%E8%AE%A1%E7%9A%84%E6%96%B9%E5%B7%AE%E5%88%86%E6%9E%90"><span class="toc-text"> 知识点&#x2F;能力点：掌握随机区组设计的方差分析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#84-%E5%A4%9A%E4%B8%AA%E6%A0%B7%E6%9C%AC%E5%9D%87%E6%95%B0%E7%9A%84%E4%B8%A4%E4%B8%A4%E6%AF%94%E8%BE%83"><span class="toc-text"> 8.4 多个样本均数的两两比较</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9%E8%83%BD%E5%8A%9B%E7%82%B9%E4%BA%86%E8%A7%A3%E5%A4%9A%E4%B8%AA%E6%A0%B7%E6%9C%AC%E5%9D%87%E6%95%B0%E7%9A%84%E4%B8%A4%E4%B8%A4%E6%AF%94%E8%BE%83"><span class="toc-text"> 知识点&#x2F;能力点：了解多个样本均数的两两比较</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#85-%E6%96%B9%E5%B7%AE%E9%BD%90%E6%80%A7%E6%A3%80%E9%AA%8C"><span class="toc-text"> 8.5 方差齐性检验</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9%E8%83%BD%E5%8A%9B%E7%82%B9%E4%BA%86%E8%A7%A3%E6%96%B9%E5%B7%AE%E9%BD%90%E6%80%A7%E6%A3%80%E9%AA%8C"><span class="toc-text"> 知识点&#x2F;能力点：了解方差齐性检验</span></a></li></ol></li></ol></li></ol></li></ol></div><div class="widget-footer">
+<widget class="widget-wrapper toc" id="data-toc" collapse="auto"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%95%E6%A0%B7%E6%9C%ACt%E6%A3%80%E9%AA%8C"><span class="toc-text">单样本t检验</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%85%8D%E5%AF%B9%E6%A0%B7%E6%9C%AC%E5%9D%87%E6%95%B0t%E6%A3%80%E9%AA%8C"><span class="toc-text">配对样本均数t检验</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%A4%E7%8B%AC%E7%AB%8B%E6%A0%B7%E6%9C%AC%E5%9D%87%E6%95%B0%E6%AF%94%E8%BE%83%E7%9A%84t%E6%A3%80%E9%AA%8C"><span class="toc-text">两独立样本均数比较的t检验</span></a></li></ol></div><div class="widget-footer">
 
 <a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a><a class="buttom" onclick="util.scrollComment()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M10.46 1.25h3.08c1.603 0 2.86 0 3.864.095c1.023.098 1.861.3 2.6.752a5.75 5.75 0 0 1 1.899 1.899c.452.738.654 1.577.752 2.6c.095 1.004.095 2.261.095 3.865v1.067c0 1.141 0 2.036-.05 2.759c-.05.735-.153 1.347-.388 1.913a5.75 5.75 0 0 1-3.112 3.112c-.805.334-1.721.408-2.977.43a10.81 10.81 0 0 0-.929.036c-.198.022-.275.054-.32.08c-.047.028-.112.078-.224.232c-.121.166-.258.396-.476.764l-.542.916c-.773 1.307-2.69 1.307-3.464 0l-.542-.916a10.605 10.605 0 0 0-.476-.764c-.112-.154-.177-.204-.224-.232c-.045-.026-.122-.058-.32-.08c-.212-.023-.49-.03-.93-.037c-1.255-.021-2.171-.095-2.976-.429A5.75 5.75 0 0 1 1.688 16.2c-.235-.566-.338-1.178-.389-1.913c-.049-.723-.049-1.618-.049-2.76v-1.066c0-1.604 0-2.86.095-3.865c.098-1.023.3-1.862.752-2.6a5.75 5.75 0 0 1 1.899-1.899c.738-.452 1.577-.654 2.6-.752C7.6 1.25 8.857 1.25 10.461 1.25M6.739 2.839c-.914.087-1.495.253-1.959.537A4.25 4.25 0 0 0 3.376 4.78c-.284.464-.45 1.045-.537 1.96c-.088.924-.089 2.11-.089 3.761v1c0 1.175 0 2.019.046 2.685c.045.659.131 1.089.278 1.441a4.25 4.25 0 0 0 2.3 2.3c.515.214 1.173.294 2.429.316h.031c.398.007.747.013 1.037.045c.311.035.616.104.909.274c.29.17.5.395.682.645c.169.232.342.525.538.856l.559.944a.52.52 0 0 0 .882 0l.559-.944c.196-.331.37-.624.538-.856c.182-.25.392-.476.682-.645c.293-.17.598-.24.909-.274c.29-.032.639-.038 1.037-.045h.032c1.255-.022 1.913-.102 2.428-.316a4.25 4.25 0 0 0 2.3-2.3c.147-.352.233-.782.278-1.441c.046-.666.046-1.51.046-2.685v-1c0-1.651 0-2.837-.089-3.762c-.087-.914-.253-1.495-.537-1.959a4.25 4.25 0 0 0-1.403-1.403c-.464-.284-1.045-.45-1.96-.537c-.924-.088-2.11-.089-3.761-.089h-3c-1.651 0-2.837 0-3.762.089" clip-rule="evenodd"/><path fill="currentColor" d="M9 11a1 1 0 1 1-2 0a1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0a1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><span>参与讨论</span></a></div></widget>
 </div></aside><div class='float-panel blur'>
@@ -658,6 +663,26 @@
       })
     }
   });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+    processEscapes: true
+  }
+});
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  }
+});
+MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for(i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
